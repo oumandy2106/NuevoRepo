@@ -36,7 +36,7 @@ public class HelloApplication extends Application {
 
         button.setOnAction(e -> {
             if (txtNombre.isEmpty || txtEdad.isEmpty || txtApellido.isEmpty ){
-
+            btnEnviar.setStyle()
             }
         });
 
