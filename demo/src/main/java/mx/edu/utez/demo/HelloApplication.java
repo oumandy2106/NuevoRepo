@@ -1,4 +1,4 @@
-package mx.edu.utez.u2_ti_06_trabajo;
+package mx.edu.utez.demo;
 
 import javafx.application.Application;
 import javafx.collections.FXCollections;
@@ -12,6 +12,8 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+
+import javax.swing.*;
 import java.io.IOException;
 
 public class HelloApplication extends Application {
@@ -31,16 +33,16 @@ public class HelloApplication extends Application {
         ObservableList<String> grupos = FXCollections.observableArrayList("Estudiante", "Profesor", "admin");
         ComboBox<String> cbGrupo = new ComboBox<>(grupos);
 
-        Button btnEnviar = new Button("Enviar");
+        Button enviar = new Button("Enviar");
         Label resultado = new Label();
 
-        button.setOnAction(e -> {
+        enviar.setOnAction(e -> {
             if (txtNombre.isEmpty || txtEdad.isEmpty || txtApellido.isEmpty ){
 
             }
         });
 
-        VBox vbox = new VBox(20,label, button, button1);
+        VBox vbox = new VBox(20,label, enviar);
         vbox.setAlignment(Pos.CENTER);
         Scene scene = new Scene(vbox, 600, 300);
 
